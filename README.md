@@ -9,7 +9,7 @@
 - **Deployed:** [URL](https://bamboo-task.vercel.app)
 
 
-[Uploading iPhone-12-PRO-localhost-dfydaix28k0v4n.webm…]()
+[iPhone-12-PRO-localhost-dfydaix28k0v4n.webm](https://github.com/user-attachments/assets/c8b89ae0-ef16-45b8-9eeb-94dbcdfeb68e)
 
 
 
