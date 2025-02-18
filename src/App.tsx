@@ -18,7 +18,7 @@ function App() {
   /** Simulate Delay to Show Animation on Initial Load */
   setTimeout(() => {
     setInititalLoader(false);
-  }, 1200);
+  }, 1000);
 
   if (inititalLoader) {
     return <InitialLoader />;

@@ -24,12 +24,12 @@ const useFetch = <T>(endpoint: string) => {
       } catch (err: any) {
         setError(err?.message || "Something went wrong");
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     };
 
     fetchData();
-  }, [endpoint]);
+  }, []);
 
   return { data, isLoading, error };
 };

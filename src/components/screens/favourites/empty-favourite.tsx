@@ -1,6 +1,6 @@
 import { LovedIcon } from "../../../assets/icons";
 
-export default function FavouriteComponent() {
+export default function EmptyFavourites() {
   return (
     <section className="flex flex-col gap-1 items-center justify-center !my-12">
       <LovedIcon />
