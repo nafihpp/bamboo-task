@@ -9,7 +9,7 @@ export const CategoryTab = ({ name, isActive, onClick }: CategoryTabProps) => (
     <button
       onClick={onClick}
       className={`
-          !min-w-[100px] !px-4 !py-2 text-sm md:text-base font-medium !rounded-lg whitespace-nowrap"
+          !min-w-[80px] !px-4 !py-2 text-sm md:text-base font-medium !rounded-lg whitespace-nowrap"
           ${
             isActive
               ? "bg-black text-white"

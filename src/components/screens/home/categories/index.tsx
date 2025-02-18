@@ -21,7 +21,7 @@ export default function CategoryListing() {
 
   return (
     <nav className=" !pb-2 !mb-6">
-      <ul className="flex gap-4 justify-center flex-wrap">
+      <ul className="flex gap-2 justify-center flex-wrap">
         {categoryList.map((categoryName) => (
           <CategoryTab
             key={String(categoryName)}

@@ -7,7 +7,7 @@ export default function FavouriteComponent() {
   const { favourites } = useFavourites();
   
   return (
-    <main>
+    <main className="h-[calc(100vh-135px)]">
       <div className="w-[90%] !mx-auto">
         <header>
           <Heading
