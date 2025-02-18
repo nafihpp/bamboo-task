@@ -13,7 +13,7 @@ export const InitialLoader = React.memo(() => {
   };
 
   return (
-    <section className="bg-black w-full h-screen flex justify-center items-center fixed top-0 left-0 z-[9999]">
+    <section className="bg-[#3C42C7] w-full h-screen flex justify-center items-center fixed top-0 left-0 z-[9999]">
       <Lottie options={defaultOptions} height={250} width={250} />
     </section>
   );

@@ -1,9 +1,7 @@
 import FavouriteComponent from "../../components/screens/favourites";
 
 const FavouritePage = () => {
-  return (
-    <FavouriteComponent />
-  );
+  return <FavouriteComponent />;
 };
 
 export default FavouritePage;

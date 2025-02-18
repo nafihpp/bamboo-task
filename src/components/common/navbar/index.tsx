@@ -36,7 +36,7 @@ export const NavbarHeader = () => {
 
           {/* Mobile Nav */}
           {isMenuOpen && (
-            <nav className="md:hidden absolute top-20 left-0 right-0 bg-white border-b p-4">
+            <nav className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-gray-300 p-4">
               <NavLinks closeMenu={closeMenu} />
             </nav>
           )}

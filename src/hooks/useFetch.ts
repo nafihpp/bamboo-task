@@ -17,7 +17,6 @@ const useFetch = <T>(endpoint: string) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       setError(null);
       try {
         const response = await axiosInstance.get(endpoint);

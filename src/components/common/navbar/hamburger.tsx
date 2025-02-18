@@ -8,8 +8,9 @@ interface HamburgerButtonProps {
  */
 export const HamburgerButton = ({ isOpen, onClick }: HamburgerButtonProps) => (
   <button
-    className="md:hidden flex flex-col justify-center items-center w-10 h-10"
+    className="md:hidden cursor-pointer flex gap-2 flex-col justify-center items-center w-10 h-10"
     onClick={onClick}
+    
     aria-label="Toggle menu"
     aria-expanded={isOpen}
   >

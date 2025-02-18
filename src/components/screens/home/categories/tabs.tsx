@@ -12,7 +12,7 @@ export const CategoryTab = ({ name, isActive, onClick }: CategoryTabProps) => (
           !min-w-[80px] !cursor-pointer !px-4 !py-2 text-sm md:text-base font-medium !rounded-lg whitespace-nowrap"
           ${
             isActive
-              ? "bg-black text-white"
+              ? "bg-[#3C42C7] text-white"
               : "bg-gray-200 text-gray-800 hover:bg-gray-300"
           }
         `}

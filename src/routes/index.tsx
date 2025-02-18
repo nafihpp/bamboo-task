@@ -7,7 +7,7 @@ const routes = [
   {
     path: "/",
     element: <HomePage />,
-    title: "Home Page",
+    title: "Home",
   },
   {
     path: "/favourites",

@@ -24,20 +24,22 @@ export const NavLinks = ({ closeMenu }: NavLinksProps) => {
           <Link
             key={route.path}
             to={route.path}
-            className={`relative !px-3 !py-2 rounded-md transition-colors ${
+            className={` !px-3 !py-2 rounded-none md:rounded-md transition-colors ${
               isActive
-                ? "bg-black text-white"
+                ? "bg-[#3C42C7] text-white"
                 : "bg-white hover:bg-gray-100 text-black"
             }`}
             onClick={closeMenu}
           >
             <span className="flex items-center">
-              {route.title}
-              {favoriteCount > 0 && route.title === "Favourites" && (
-                <span className="!ml-2 bg-green-500 text-white !rounded-full !px-2 !py-1.5 text-xs absolute md:-top-2 md:-right-2">
-                  {favoriteCount}
-                </span>
-              )}
+              <p className="relative">
+                {route.title}
+                {favoriteCount > 0 && route.title === "Favourites" && (
+                  <span className="!ml-2 bg-[#5C62E3] text-white !rounded-full w-6 flex items-center justify-center !h-6 text-xs absolute bottom-3 -right-6 md:-top-6 md:-right-5">
+                    {favoriteCount}
+                  </span>
+                )}
+              </p>
             </span>
           </Link>
         );

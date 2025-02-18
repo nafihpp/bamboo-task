@@ -25,15 +25,19 @@ function App() {
   }
 
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <NavbarHeader />
-      <Routes>
-        {routes.map(({ path, element }, index) => (
-          <Route key={index} path={path} element={element} />
-        ))}
-      </Routes>
-      <Footer />
-    </Suspense>
+    <main className="min-h-screen flex flex-col">
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <NavbarHeader />
+        <main className="flex-grow">
+          <Routes>
+            {routes.map(({ path, element }, index) => (
+              <Route key={index} path={path} element={element} />
+            ))}
+          </Routes>
+        </main>
+        <Footer />
+      </Suspense>
+    </main>
   );
 }
 
