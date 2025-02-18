@@ -4,7 +4,6 @@ import { ProductsEndpoints } from "../../../../modules/endpoints";
 import { ProductCatalog } from "../../../../types/product";
 import { categoryFilter, searchProducts } from "../../../../utils/custom-utils";
 import { SearchComponent } from "../search";
-import { SkeletonLoader } from "../../../common/loaders/skelton";
 import useFetch from "../../../../hooks/useFetch";
 import ProductCard from "./card";
 import useDebounce from "../../../../hooks/useDebounce";
