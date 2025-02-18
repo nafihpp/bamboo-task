@@ -2,6 +2,7 @@ import { useCategory } from "../../../../context/categories";
 import useFetch from "../../../../hooks/useFetch";
 import { ProductsEndpoints } from "../../../../modules/endpoints";
 import type { ProductCatalog } from "../../../../types/product";
+import { SkeletonLoader } from "../../../common/loaders/skelton";
 import { CategoryTab } from "./tabs";
 
 /**
@@ -9,11 +10,9 @@ import { CategoryTab } from "./tabs";
  * Fetches and displays the list of Categories for filtering as responsive tabs
  */
 export default function CategoryListing() {
-  const { data: categories, error, isLoading } = useFetch<ProductCatalog>(ProductsEndpoints.CATEGORIES);
+  const { data: categories, error,isLoading } = useFetch<ProductCatalog>(ProductsEndpoints.CATEGORIES);
   const { setCategory, category } = useCategory();
 
-  /** TODO: add skelton loader here */
-  if (isLoading) return <div>loading</div>;
   if (error) return <ErrorState error={error} />;
   if (!categories || categories.length === 0) return <EmptyState />;
 
@@ -22,6 +21,14 @@ export default function CategoryListing() {
   return (
     <nav className=" !pb-2 !mb-6">
       <ul className="flex gap-2 justify-center flex-wrap">
+        {/* Show SkeletonLoader if still loading */}
+        {isLoading && (
+          <li className="mb-4">
+            <SkeletonLoader className="!min-h-[100px] !min-w-[200px]" />
+          </li>
+        )}
+
+        {/* Show category tabs once categories are available */}
         {categoryList.map((categoryName) => (
           <CategoryTab
             key={String(categoryName)}
