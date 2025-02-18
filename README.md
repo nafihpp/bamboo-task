@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-- **Deployed:** [URL](https://bamboo-task.vercel.app)
+- **Deployed Link:** [Live URL](https://bamboo-task.vercel.app)
 
 
 [iPhone-12-PRO-localhost-dfydaix28k0v4n.webm](https://github.com/user-attachments/assets/c8b89ae0-ef16-45b8-9eeb-94dbcdfeb68e)
@@ -52,7 +52,7 @@
 - **Make the product your Favourite**: User can Make the Products to their Favourites by pressing on the heart in the card.
 - **Debounced Search**: Real-time filtering on clients side with performance-optimized debounce functionality (Reusable Hook added).
 - **Double-tap to Favourite**: Users can double-tap any Product card Image to mark it as a favourite.
-- **Product Category based Filtering**: Tab based (component) Filtering based on Categories for the Products.
+- **Product Category based Filtering**: Tab Component based Filtering on Categories for the Products.
 - **Code-Splitting for Performance Optimization**: Implemented dynamic code-splitting to load only the necessary code for each route, Improved Performance.
 - **Multiple Reusable hook added** : useFetch, useDebounce.
 - **Centralized Axios Interceptors**: Simplified API request handling, and module wise structured making the app scalable and easier to maintain.
