@@ -34,7 +34,7 @@ export const NavLinks = ({ closeMenu }: NavLinksProps) => {
             <span className="flex items-center">
               {route.title}
               {favoriteCount > 0 && route.title === "Favourites" && (
-                <span className="!ml-2 bg-green-500 text-white !rounded-full !px-2 !py-1.5 text-xs absolute -top-2 -right-2">
+                <span className="!ml-2 bg-green-500 text-white !rounded-full !px-2 !py-1.5 text-xs absolute md:-top-2 md:-right-2">
                   {favoriteCount}
                 </span>
               )}

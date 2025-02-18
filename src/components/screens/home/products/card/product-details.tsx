@@ -1,21 +1,24 @@
 import { IRating } from "../../../../../types/product";
 import { ProductCardProps } from "./types";
 
-
 /**
  * ProductDetails component displays product information including title, rating, and price.
  */
 export const ProductDetails = ({ product }: ProductCardProps) => {
   return (
     <div className="flex flex-col gap-4 items-center">
-      <h2 className="text-lg font-semibold mb-2 text-gray-900 text-center">
+      <h2
+        data-tooltip-id={`product-title-${product.id}`}
+        data-tooltip-content={product.title}
+        className="text-lg font-semibold text-gray-900 text-center truncate max-w-full w-full"
+      >
         {product.title}
       </h2>
       <ProductRating rating={product.rating} />
       <ProductPrice price={product.price} />
     </div>
   );
-}
+};
 
 /**
  * ProductRating component displays the product's star rating.
@@ -30,7 +33,7 @@ const ProductRating = ({ rating }: { rating: IRating }) => {
       <span className="text-red-300">({rating?.count})</span>
     </div>
   );
-}
+};
 
 /**
  * ProductPrice component displays the product's price with a discount.
@@ -43,4 +46,4 @@ const ProductPrice = ({ price }: { price: number }) => {
       <p className="font-bold text-lg text-gray-900">AED {price.toFixed(2)}</p>
     </div>
   );
-}
+};

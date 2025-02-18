@@ -30,7 +30,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }, [isFavorite, product, setFavourites]);
 
   return (
-    <li className="bg-white rounded-xl border border-gray-300 !p-4 transition-transform hover:scale-[1.02]">
+    <li className="bg-white rounded-xl border border-gray-300 max-h-[480px] !p-4 transition-transform hover:scale-[1.02]">
       <ProductImage
         product={product}
         loved={loved}
