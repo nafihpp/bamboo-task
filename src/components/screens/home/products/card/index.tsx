@@ -1,14 +1,11 @@
 import { useCallback, useState } from "react";
-import { IProduct } from "../../../../../types/product";
 import { useFavourites } from "../../../../../context/favourite";
 import { isFavouriteProduct } from "../../../../../utils/custom-utils";
 import { ProductImage } from "./product-image";
 import { FavoriteHeart } from "./favourite-heart";
 import { ProductDetails } from "./product-details";
+import { ProductCardProps } from "./types";
 
-interface ProductCardProps {
-  product: IProduct;
-}
 
 /**
  * ProductCard component displays a single product with image, favorite heart,rating, and pricing details.

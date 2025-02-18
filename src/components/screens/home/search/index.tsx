@@ -1,9 +1,5 @@
 import { CloseIcon, SearchIcon } from "../../../../assets/icons";
-
-interface SearchComponentProps {
-  searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
-}
+import { SearchComponentProps } from "./types";
 
 export const SearchComponent: React.FC<SearchComponentProps> = ({ searchQuery, setSearchQuery }) => {
   return (

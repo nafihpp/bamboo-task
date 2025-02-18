@@ -1,13 +1,11 @@
-import { IProduct, IRating } from "../../../../../types/product";
+import { IRating } from "../../../../../types/product";
+import { ProductCardProps } from "./types";
 
-interface ProductDetailsProps {
-  product: IProduct;
-}
 
 /**
  * ProductDetails component displays product information including title, rating, and price.
  */
-export function ProductDetails({ product }: ProductDetailsProps) {
+export const ProductDetails = ({ product }: ProductCardProps) => {
   return (
     <div className="flex flex-col gap-4 items-center">
       <h2 className="text-lg font-semibold mb-2 text-gray-900 text-center">
@@ -22,7 +20,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
 /**
  * ProductRating component displays the product's star rating.
  */
-function ProductRating({ rating }: { rating: IRating }) {
+const ProductRating = ({ rating }: { rating: IRating }) => {
   return (
     <div className="flex items-center mb-4">
       <span className="text-yellow-500 text-2xl">
@@ -37,7 +35,7 @@ function ProductRating({ rating }: { rating: IRating }) {
 /**
  * ProductPrice component displays the product's price with a discount.
  */
-function ProductPrice({ price }: { price: number }) {
+const ProductPrice = ({ price }: { price: number }) => {
   const discountedPrice = (price - price / 10).toFixed(2);
   return (
     <div className="flex justify-center items-center gap-2 mb-4">

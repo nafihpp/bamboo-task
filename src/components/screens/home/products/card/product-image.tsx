@@ -13,11 +13,8 @@ interface ProductImageProps {
 /**
  * ProductImage component displays the product image with double-tap functionality.
  */
-export function ProductImage({
-  product,
-  loved,
-  onDoubleTap,
-}: ProductImageProps) {
+export function ProductImage(props: ProductImageProps) {
+  const { product, loved, onDoubleTap } = props;
   const [tap, setTap] = useState(0);
 
   const handleTap = useCallback(() => {
