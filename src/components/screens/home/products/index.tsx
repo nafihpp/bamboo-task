@@ -5,6 +5,8 @@ import { ProductsEndpoints } from "../../../../modules/endpoints";
 import { ProductCatalog } from "../../../../types/product";
 import { categoryFilter, searchProducts } from "../../../../utils/custom-utils";
 import ProductCard from "./card";
+import useDebounce from "../../../../hooks/useDebounce";
+import { SearchComponent } from "../search";
 
 /**
  * ProductList component
@@ -15,6 +17,10 @@ export default function ProductList() {
     ProductsEndpoints.BASE
   );
   const [searchQuery, setSearchQuery] = useState("");
+
+  //delay of 1000ms for debouncing.
+  const debouncedSearchQuery = useDebounce(searchQuery, 1000);
+
   const { category } = useCategory();
 
   if (isLoading) return <p className="text-center">Loading products...</p>;
@@ -31,21 +37,18 @@ export default function ProductList() {
   const filteredByCategory =
     category !== "All" ? categoryFilter(data, category) : data;
 
-  const filteredAndSearched = searchProducts(filteredByCategory, searchQuery);
+  const filteredAndSearched = searchProducts(
+    filteredByCategory,
+    debouncedSearchQuery
+  );
 
   return (
     <section>
       {/* Search input */}
-      <div className="!my-4 !mb-8">
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full !p-4 border border-gray-300 bg-white !rounded-xl"
-        />
-      </div>
-
+      <SearchComponent
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
       <ul className="!pb-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 auto-rows-fr">
         {filteredAndSearched?.map((product) => (
           <ProductCard product={product} />

@@ -16,7 +16,7 @@ export const NavbarHeader = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="bg-white text-black border-b flex items-center h-20">
+    <header className="bg-white text-black border-b border-gray-300 flex items-center h-20">
       <div className="!mx-auto w-[90%]">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
