@@ -1,4 +1,4 @@
-**Bamboo - Task ** built with **Next.js**, **TypeScript**.
+**Bamboo-Task** built with **Next.js**, **TypeScript**.
 
 - All Requirements are done!
 - Bonus Points after requiremenets are listed in the bottom of the Readme.
