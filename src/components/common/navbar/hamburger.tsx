@@ -14,18 +14,18 @@ export const HamburgerButton = ({ isOpen, onClick }: HamburgerButtonProps) => (
     aria-expanded={isOpen}
   >
     <span
-      className={`w-6 h-0.5 bg-black transition-all duration-300 ${
-        isOpen ? "rotate-45 translate-y-1.5" : ""
+      className={`w-6 h-0.5 bg-black transition-all duration-300 ease-in-out ${
+        isOpen ? "rotate-45 translate-y-2" : ""
       }`}
     />
     <span
-      className={`w-6 h-0.5 bg-black my-1 transition-all duration-300 ${
+      className={`w-6 h-0.5 bg-black my-1 transition-all duration-300 ease-in-out ${
         isOpen ? "opacity-0" : ""
       }`}
     />
     <span
-      className={`w-6 h-0.5 bg-black transition-all duration-300 ${
-        isOpen ? "-rotate-45 -translate-y-1.5" : ""
+      className={`w-6 h-0.5 bg-black transition-all duration-300 ease-in-out ${
+        isOpen ? "-rotate-45 -translate-y-2" : ""
       }`}
     />
   </button>

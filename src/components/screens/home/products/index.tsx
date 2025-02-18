@@ -36,13 +36,13 @@ export default function ProductList() {
   return (
     <section>
       {/* Search input */}
-      <div className="mb-4">
+      <div className="!my-4 !mb-8">
         <input
           type="text"
           placeholder="Search products..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-md"
+          className="w-full !p-4 border border-gray-300 bg-white !rounded-xl"
         />
       </div>
 

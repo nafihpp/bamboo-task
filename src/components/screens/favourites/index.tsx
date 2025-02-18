@@ -8,11 +8,11 @@ export default function FavouriteComponent() {
   
   return (
     <main>
-      <div className="w-[95%] !mx-auto">
+      <div className="w-[90%] !mx-auto">
         <header>
           <Heading
             title="Double tap on Product or Press the Heart to make it your Favourite Product"
-            icon={<FilledHeartIcon className="w-12 h-12" />}
+            icon={<FilledHeartIcon className="w-8 h-8 md:w-12 md:h-12" />}
           />
         </header>
         <ul className="flex flex-wrap gap-8 w-full">
