@@ -8,9 +8,7 @@
 
 - **Deployed Link:** [Live URL](https://bamboo-task.vercel.app)
 
-
-[iPhone-12-PRO-localhost-dfydaix28k0v4n.webm](https://github.com/user-attachments/assets/c8b89ae0-ef16-45b8-9eeb-94dbcdfeb68e)
-
+[iPhone-12-PRO-bamboo-task.vercel.app-tfgrth3_5lns29.webm](https://github.com/user-attachments/assets/8c5b0789-15ef-4a4c-938c-89df46f8c26d)
 
 
 ---
