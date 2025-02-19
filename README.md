@@ -1,4 +1,4 @@
-**Bamboo-Task** built with **Next.js**, **TypeScript**.
+**Bamboo-Task** built with **React.js**, **TypeScript**.
 
 - All Requirements are done!
 - Bonus Points after requiremenets are listed in the bottom of the Readme.
@@ -9,7 +9,6 @@
 - **Deployed Link:** [Live URL](https://bamboo-task.vercel.app)
 
 [iPhone-12-PRO-bamboo-task.vercel.app-tfgrth3_5lns29.webm](https://github.com/user-attachments/assets/8c5b0789-15ef-4a4c-938c-89df46f8c26d)
-
 
 ---
 
@@ -45,22 +44,17 @@
 
 ## 🎯 Extra Bonus Points
 
-### **Frontend Highlights:**
-
-- **Make the product your Favourite**: User can Make the Products to their Favourites by pressing on the heart in the card.
-- **Debounced Search**: Real-time filtering on clients side with performance-optimized debounce functionality (Reusable Hook added).
-- **Double-tap to Favourite**: Users can double-tap any Product card Image to mark it as a favourite.
-- **Product Category based Filtering**: Tab Component based Filtering on Categories for the Products.
-- **Code-Splitting for Performance Optimization**: Implemented dynamic code-splitting to load only the necessary code for each route, Improved Performance.
-- **Multiple Reusable hook added** : useFetch, useDebounce.
-- **Centralized Axios Interceptors**: Simplified API request handling, and module wise structured making the app scalable and easier to maintain.
-- **NProgress Loading Indicator**: Integrated loading bars on route changes for seamless transitions.
-- **Skeleton Loaders**: Reusable skeleton components to improve user experience and aesthetics while data is being fetched.
-- **404 Page for Non-existing Routes** : Added a 404 Page that will be shown when users navigate to a non-existing route. This ensures that users are not greeted with a blank screen but instead receive a user-friendly error message.
-- **Initial Shopping Animated Loader Added**
-
----
-
-- **Full TypeScript Adoption**: written in TypeScript for enhanced type safety and scalability.
+- **Favorite Products**: Users can mark products as favorites by clicking the heart icon on product cards.
+- **Double-tap to Favorite**: Double-tapping a product card image also marks it as a favorite.
+- **Debounced Search**: Real-time, client-side filtering with performance-optimized debounce functionality.
+- **NProgress Loading Indicator**: Loading bars on route changes for seamless transitions.
+- **Skeleton Loaders**: Reusable skeleton components for improved UX while fetching data.
+- **Initial Animated Loader**: Shopping-themed animated loader on initial app load.
+- **404 Page**: Custom page for non-existing routes, providing a user-friendly error message.
+- **Code-Splitting**: Dynamic code-splitting to load only necessary code for each route, improving performance.
+- **Reusable Custom Hooks**: Includes `useFetch` and `useDebounce` for enhanced functionality and code reusability.
+- **Centralized Axios Interceptors**: Simplified API request handling with modular structure for scalability and maintainability.
+- **Category-based Filtering**: Tab component for filtering products by category.
+- **Full TypeScript Adoption**: Entire application written in TypeScript for enhanced type safety and scalability.
 
 ---
