@@ -12,9 +12,9 @@ export function FavoriteHeart({ isFavorite, onClick }: FavoriteHeartProps) {
   return (
     <section className="flex justify-end">
       {isFavorite ? (
-        <FilledHeartIcon className="h-7 w-7 cursor-pointer" onClick={onClick} />
+        <FilledHeartIcon className="h-8 w-8 cursor-pointer" onClick={onClick} />
       ) : (
-        <FavouriteIcon className="h-7 w-7 cursor-pointer" onClick={onClick} />
+        <FavouriteIcon className="h-8 w-8 cursor-pointer" onClick={onClick} />
       )}
     </section>
   );
