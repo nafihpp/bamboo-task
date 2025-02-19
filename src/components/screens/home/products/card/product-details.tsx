@@ -42,8 +42,8 @@ const ProductPrice = ({ price }: { price: number }) => {
   const discountedPrice = (price - price / 10).toFixed(2);
   return (
     <div className="flex justify-center items-center gap-2 mb-4">
-      <p className="text-sm text-red-600 line-through">AED {discountedPrice}</p>
-      <p className="font-bold text-lg text-gray-900">AED {price.toFixed(2)}</p>
+      <p className="text-sm text-red-600 line-through">AED {price.toFixed(2)}</p>
+      <p className="font-bold text-lg text-gray-900">AED {discountedPrice}</p>
     </div>
   );
 };
