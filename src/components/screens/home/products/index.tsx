@@ -4,6 +4,7 @@ import { ProductsEndpoints } from "../../../../modules/endpoints";
 import { ProductCatalog } from "../../../../types/product";
 import { categoryFilter, searchProducts } from "../../../../utils/custom-utils";
 import { SearchComponent } from "../search";
+import { ErrorState } from "../../../common/error-state";
 import useFetch from "../../../../hooks/useFetch";
 import ProductCard from "./card";
 import useDebounce from "../../../../hooks/useDebounce";
@@ -15,27 +16,24 @@ import ProductLoading from "./loader";
  */
 export default function ProductList() {
   const [searchQuery, setSearchQuery] = useState("");
-  const { error, data, isLoading } = useFetch<ProductCatalog>(ProductsEndpoints.BASE);
+  const { error, data, isLoading } = useFetch<ProductCatalog>(
+    ProductsEndpoints.BASE
+  );
   const { category } = useCategory();
 
   // Delay of 1000ms for debouncing
   const debouncedSearchQuery = useDebounce(searchQuery, 1000);
 
-  if (isLoading) return <ProductLoading isLoading={isLoading} />
+  if (isLoading) return <ProductLoading isLoading={isLoading} />;
 
   if (!data || (data?.length === 0 && !isLoading))
-    return <p className="text-center text-2xl">No products available</p>;
+      return <ErrorState error="No products available" />;
 
-  if (error)
-    return (
-      <p className="text-center text-red-500">
-        Error loading products: {error}
-      </p>
-    );
+  if (error) return <ErrorState error="No products available" />;
 
   const filteredByCategory = category !== "All" ? categoryFilter(data, category) : data;
 
-  const filteredAndSearched = searchProducts( filteredByCategory, debouncedSearchQuery);
+  const filteredAndSearched = searchProducts(filteredByCategory,debouncedSearchQuery);
 
   return (
     <section>

@@ -3,8 +3,8 @@ import { useCategory } from "../../../../context/categories";
 import { CategoryTab } from "./tabs";
 import { ProductsEndpoints } from "../../../../modules/endpoints";
 import type { ProductCatalog } from "../../../../types/product";
-import { EmptyState, ErrorState } from "./states";
 import CategoryLoading from "./loader";
+import { ErrorState } from "../../../common/error-state";
 
 /**
  * CategoryListing component
@@ -16,7 +16,7 @@ export default function CategoryListing() {
 
   if (isLoading) return <CategoryLoading isLoading={isLoading} />;
   if (error) return <ErrorState error={error} />;
-  if (!categories || categories.length === 0) return <EmptyState />;
+  if (!categories || categories.length === 0) return <ErrorState error={'No categories available'} />;
 
 
   const categoryList = ["All", ...categories];
