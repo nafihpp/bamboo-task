@@ -10,11 +10,11 @@ interface FavoriteHeartProps {
  */
 export function FavoriteHeart({ isFavorite, onClick }: FavoriteHeartProps) {
   return (
-    <section onClick={onClick} className="flex justify-end w-full">
+    <section className="flex justify-end">
       {isFavorite ? (
-        <FilledHeartIcon className="h-10 w-10" />
+        <FilledHeartIcon className="h-7 w-7 cursor-pointer" onClick={onClick} />
       ) : (
-        <FavouriteIcon className="h-10 w-10" />
+        <FavouriteIcon className="h-7 w-7 cursor-pointer" onClick={onClick} />
       )}
     </section>
   );

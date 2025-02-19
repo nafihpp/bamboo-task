@@ -7,8 +7,8 @@ export const FavouriteIcon: React.FC<React.SVGProps<SVGSVGElement>> = (
       fill="currentColor"
       strokeWidth="0"
       viewBox="0 0 1024 1024"
-      height="25"
-      width="25"
+      height="20"
+      width="20"
       style={{ cursor: "pointer" }}
       {...props}
     >
@@ -26,8 +26,8 @@ export const FilledHeartIcon: React.FC<React.SVGProps<SVGSVGElement>> = (
       fill="red"
       strokeWidth="0"
       viewBox="0 0 1024 1024"
-      height="25"
-      width="25"
+      height="20"
+      width="20"
       style={{ cursor: "pointer" }}
       {...props}
     >
